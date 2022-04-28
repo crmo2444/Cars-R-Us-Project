@@ -24,16 +24,8 @@ document.addEventListener(
     (changeEvent) => {
         if (changeEvent.target.id === "paint-colors") {
             const chosenOption = changeEvent.target.value
+            setPaintColor(parseInt(chosenOption))
             console.log(chosenOption)  // "1" or "2"
-        }
-    }
-)
-//change 36 from window alert -> orderBuilder function
-document.addEventListener(
-    "change",
-    (event) => {
-        if (event.target.name === "paint-color") {
-            setPaintColor(parseInt(event.target.value))
         }
     }
 )

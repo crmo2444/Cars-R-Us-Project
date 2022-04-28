@@ -13,21 +13,13 @@ export const Interior = () => {
     html += `</select>`
     return html
 }
-//change line 21 from window alert to setting id in orderBuilder
-document.addEventListener(
-    "change",
-    (event) => {
-        if (event.target.name === "interior") {
-            setInterior(parseInt(event.target.value))
-        }
-    }
-)
 
 document.addEventListener(
     "change",
     (changeEvent) => {
         if (changeEvent.target.id === "interiors") {
             const chosenOption = changeEvent.target.value
+            setInterior(parseInt(chosenOption))
             console.log(chosenOption)  // "1" or "2"
         }
     }
