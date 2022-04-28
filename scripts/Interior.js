@@ -3,7 +3,7 @@ import { getInterior } from "./database.js";
 let interiors = getInterior()
 
 export const Interior = () => {
-    let html = `<select id="interiors">
+    let html = `<select id="interiors" name="interior">
                     <option value="0">Select interior...</option>`
 
     for (const interior of interiors) {
@@ -13,6 +13,14 @@ export const Interior = () => {
     html += `</select>`
     return html
 }
+document.addEventListener(
+    "change",
+    (event) => {
+        if (event.target.name === "interior") {
+            window.alert(`User chose interior option ${event.target.value}.`)
+        }
+    }
+)
 
 document.addEventListener(
     "change",
