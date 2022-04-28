@@ -19,16 +19,8 @@ document.addEventListener(
     (changeEvent) => {
         if (changeEvent.target.id === "wheels") {
             const chosenOption = changeEvent.target.value
+            setWheels(parseInt(chosenOption))
             console.log(chosenOption)  // "1" or "2"
-        }
-    }
-)
-
-document.addEventListener(
-    "change",
-    (event) => {
-        if (event.target.name === "wheel") {
-            setWheels(parseInt(event.target.value))
         }
     }
 )

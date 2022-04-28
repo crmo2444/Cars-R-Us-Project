@@ -19,16 +19,8 @@ document.addEventListener(
     (changeEvent) => {
         if (changeEvent.target.id === "technologies") {
             const chosenOption = changeEvent.target.value
+            setTechnology(parseInt(chosenOption))
             console.log(chosenOption)  // "1" or "2"
-        }
-    }
-)
-
-document.addEventListener(
-    "change",
-    (event) => {
-        if (event.target.name === "technology") {
-            setTechnology(parseInt(event.target.value))
         }
     }
 )

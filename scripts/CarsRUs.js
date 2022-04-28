@@ -1,7 +1,23 @@
+import { addCustomOrder } from "./database.js";
 import { Interior } from "./Interior.js";
+import { Orders } from "./Orders.js";
 import { PaintColors } from "./PaintColors.js";
 import { Technology } from "./Technology.js";
 import { Wheels } from "./Wheels.js";
+
+//button event listener that will store the customer's order w/ function
+//addCustomOrder
+document.addEventListener(
+    "click",
+    (clickEvent) => {
+        const itemClicked = clickEvent.target
+        //when create new button is clicked
+        if (itemClicked.id.startsWith("orderButton")) {
+                    //trigger addCustomOrder
+                    let newOrder = addCustomOrder();  
+        }
+    }
+)
 
 //creates a file that interpolates ALL html strings instead of calling them
 //individually
@@ -36,7 +52,13 @@ export const CarsRUs = () => {
         <article>
             <button id="orderButton">Create Custom Order</button>
         </article>
+
+        <article class="customOrders">
+            <h2>Custom Car Orders</h2>
+            ${Orders()}
+        </article>
     `
 
     return html
 }
+
