@@ -30,7 +30,7 @@ export const CarsRUs = () => {
     let html = `
         <h1>Cars R Us</h1>
 
-        <article class="paints">
+        <article class="choices">
             <section class="choices__paints">
                 <h2>Paint Colors</h2>
                 ${PaintColors()}
