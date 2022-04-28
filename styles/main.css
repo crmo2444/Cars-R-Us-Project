@@ -1,0 +1,35 @@
+
+h1 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 30pt;
+    color: rgb(37, 15, 12);
+    background-color: rgb(223, 223, 108);
+}
+
+.choices__paints,
+.choices__interior,
+.choices__technology,
+.choices__wheels {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: darkslategrey;
+    border: 1px dotted black;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 0.5rem;
+}
+
+#orderButton {
+    background-color: rgb(223, 223, 108);
+    margin: 1rem;
+
+}
+
+.customOrders {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+    font-weight: bold;
+    margin: 1rem;
+}
