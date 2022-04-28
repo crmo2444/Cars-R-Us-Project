@@ -1,4 +1,4 @@
-import { getInterior } from "./database.js";
+import { getInterior, setInterior } from "./database.js";
 
 let interiors = getInterior()
 
@@ -13,11 +13,12 @@ export const Interior = () => {
     html += `</select>`
     return html
 }
+//change line 21 from window alert to setting id in orderBuilder
 document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "interior") {
-            window.alert(`User chose interior option ${event.target.value}.`)
+            setInterior(parseInt(event.target.value))
         }
     }
 )
