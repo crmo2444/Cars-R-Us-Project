@@ -8,7 +8,7 @@ import { getPaintColors } from "./database.js";
 let colors = getPaintColors()
 
 export const PaintColors = () => {
-    let html = `<select id="paint-colors">
+    let html = `<select id="paint-colors" name="paint-color">
                     <option value="0">Select paint color...</option>`
 
     for (const color of colors) {
@@ -25,6 +25,15 @@ document.addEventListener(
         if (changeEvent.target.id === "paint-colors") {
             const chosenOption = changeEvent.target.value
             console.log(chosenOption)  // "1" or "2"
+        }
+    }
+)
+
+document.addEventListener(
+    "change",
+    (event) => {
+        if (event.target.name === "paint-color") {
+            window.alert(`User chose paint color option ${event.target.value}.`)
         }
     }
 )
