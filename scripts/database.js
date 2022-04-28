@@ -22,7 +22,8 @@ const database = {
         { id: 2, option: "17-inch Pair Radial Black", price: 250 },
         { id: 3, option: "18-inch Pair Spoke Silver", price: 400 },
         { id: 4, option: "18-inch Pair Spoke Black", price: 450 }
-    ]
+    ],
+    orderBuilder: {}
 }
 
     export const getPaintColors = () => {
@@ -36,4 +37,17 @@ const database = {
     }
     export const getWheels = () => {
         return database.wheels.map(wheels => ({...wheels}))
+    }
+    //all functions that will add to orderBuilder to create custom orders
+    export const setPaintColor = (id) => {
+        database.orderBuilder.paintId = id
+    }
+    export const setInterior = (id) => {
+        database.orderBuilder.interiorId = id
+    }
+    export const setTechnology = (id) => {
+        database.orderBuilder.technologyId = id
+    }
+    export const setWheels = (id) => {
+        database.orderBuilder.wheelsId = id
     }

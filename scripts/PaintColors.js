@@ -1,4 +1,4 @@
-import { getPaintColors } from "./database.js";
+import { getPaintColors, setPaintColor } from "./database.js";
 
 //create and export a function that generates HTML for paint colors
 
@@ -28,12 +28,12 @@ document.addEventListener(
         }
     }
 )
-
+//change 36 from window alert -> orderBuilder function
 document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "paint-color") {
-            window.alert(`User chose paint color option ${event.target.value}.`)
+            setPaintColor(parseInt(event.target.value))
         }
     }
 )
