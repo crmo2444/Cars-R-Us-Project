@@ -53,11 +53,10 @@ export const totalPrice = (order) => {
 
 export const buildOrderListItem = (order, costString) => {
     return `<li>
-    Order #${order.id} was placed on ${order.timestamp}
-    </li>    
-    Order #${order.id} cost ${costString}
+    Order #${order.id} was placed on ${order.timestamp} and costs $${costString}.
     </li>`    
 }
+
 
 
 //create a function that prints HTML for each order placed (price, order #, time)
